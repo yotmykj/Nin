@@ -12,8 +12,9 @@ android {
         applicationId = "com.ninplus.tv"
         minSdk = 29
         targetSdk = 35
-        versionCode = 1
-        versionName = "0.1.0"
+
+        versionCode = 2
+        versionName = "0.2.0"
     }
 
     buildFeatures {
@@ -28,12 +29,6 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
-
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
-    }
 }
 
 kotlin {
@@ -41,7 +36,9 @@ kotlin {
 }
 
 dependencies {
-    val composeBom = platform("androidx.compose:compose-bom:2025.01.00")
+
+    val composeBom =
+        platform("androidx.compose:compose-bom:2025.01.00")
 
     implementation(composeBom)
 
@@ -49,9 +46,13 @@ dependencies {
 
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.foundation:foundation")
+    implementation("androidx.compose.animation:animation")
+
     implementation("androidx.compose.material3:material3")
 
     implementation("androidx.tv:tv-material:1.0.0")
 
-    debugImplementation("androidx.compose.ui:ui-tooling")
+    debugImplementation(
+        "androidx.compose.ui:ui-tooling"
+    )
 }
