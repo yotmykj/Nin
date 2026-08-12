@@ -1,1 +1,0 @@
-This source project intentionally does not contain a generated Gradle wrapper JAR. Before GitHub Actions can run ./gradlew, generate/commit the standard Gradle wrapper (gradle wrapper) using Gradle 8.11+ in a Gradle environment. The project configuration is otherwise ready for Android Studio/Gradle and the workflow is included.
